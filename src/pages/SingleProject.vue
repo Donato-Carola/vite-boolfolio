@@ -3,7 +3,7 @@
       <div class="row justify-content-center">
       <!--<h1>My project {{ $route.params.id }}</h1>-->
          
-           <SingleCard class="card p-0 col-12 mx-4 my-5 " :title="project.title"  :image="project.image" :description="project.description" 
+           <SingleCard class="card p-0 col-5 mx-4 my-5 " :title="project.title"  :image="project.image" :description="project.description" 
             ::fullLenghth="true"/>
   
    
