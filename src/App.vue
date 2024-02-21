@@ -1,13 +1,13 @@
 <script >
 import AppHeader from './components/AppHeader.vue';
-import AppMain from './components/AppMain.vue';
+
 
 
 
 export default{
   components:{
     AppHeader,
-    AppMain,
+   
   }
 }
 
@@ -18,7 +18,12 @@ export default{
 
 
 <AppHeader/>
-<AppMain/>
+
+<!--questo è il luogo dove tuttto può cambiare in base alle route-->
+
+<router-view>
+
+</router-view>
 
 
 </template>
