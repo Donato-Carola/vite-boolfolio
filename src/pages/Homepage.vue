@@ -1,5 +1,5 @@
 <template lang="">
-    <div>
+    <div class='container' >
         <h1>homepage</h1>
     </div>
 </template>
@@ -16,6 +16,6 @@ export default {
 
 
 
-<style lang="">
+<style lang="scss" scoped> 
     
 </style>

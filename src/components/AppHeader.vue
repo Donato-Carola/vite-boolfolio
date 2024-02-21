@@ -1,5 +1,5 @@
 <template>
-  <header >
+  <header>
     <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
       <div class="container">
         <a class="navbar-brand" href="#">Projects</a>
@@ -16,16 +16,13 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
           <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <li class="nav-item" v-for="(link,index) in linkItems" :key="index">
+              <router-link
+                :to="{ name: link.routeName }"
+                class="nav-link active">
+              {{link.label}}
+              </router-link>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Projects</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Types</a>
-            </li>
-            
           </ul>
         </div>
       </div>
@@ -33,6 +30,27 @@
   </header>
 </template>
 
-<script></script>
+<script>
+export default {
+  data() {
+    return {
+      linkItems: [
+        {
+          label: 'Homepage',
+          routeName: "home",
+        },
+        {
+          label: 'ProjectList',
+          routeName: "projects",
+        },
+        {
+          label: 'TypesList',
+          routeName: "types",
+        },
+      ],
+    };
+  },
+};
+</script>
 
-<style lang="scss"></style>
+<style lang="scss" scoped></style>
