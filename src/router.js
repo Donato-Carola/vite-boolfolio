@@ -3,6 +3,7 @@ import HomePage from './pages/Homepage.vue';
 import ProjectList from './pages/ProjectList.vue';
 import TypesList from './pages/TypesList.vue';
 import NotFound from './pages/NotFound.vue';
+import SingleProject from './pages/SingleProject.vue'
 
 
 const router = createRouter({
@@ -17,6 +18,11 @@ const router = createRouter({
         path: "/projects" ,
         name:'projects',
         component: ProjectList
+    },
+    { 
+        path: "/projects/:id" ,
+        name:'single-project',
+        component: SingleProject
     },
     { 
         path: "/types" ,

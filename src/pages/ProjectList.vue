@@ -4,7 +4,7 @@
   
        
           <SingleCard class="card p-0 col-3 mx-4 my-5 "  v-for="project in projects" :key="project.id"  
-          :title="project.title"  :image="project.image" :description="project.description" 
+          :title="project.title"  :image="project.image" :description="project.description" :linkRoute="{name:'single-project', params:{id:project.id}}" linkLabel="Read more... " 
           />
 
  
@@ -53,4 +53,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
 </style>
